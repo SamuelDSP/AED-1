@@ -51,17 +51,14 @@ int main() {
 
         int valido = 1;
 
-        // Verifica linhas
         for (int i = 0; i < 9 && valido; i++) {
             if (!verifica_linha(matriz, i)) valido = 0;
         }
 
-        // Verifica colunas
         for (int j = 0; j < 9 && valido; j++) {
             if (!verifica_coluna(matriz, j)) valido = 0;
         }
 
-        // Verifica submatrizes 3x3
         for (int i = 0; i < 9 && valido; i += 3) {
             for (int j = 0; j < 9 && valido; j += 3) {
                 if (!verifica_submatriz(matriz, i, j)) valido = 0;
